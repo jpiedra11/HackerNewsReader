@@ -1,4 +1,4 @@
-# Título del Proyecto
+# Hacker News Reader
 
 _Lector de noticias alimentado desde el portal [Hacker News](https://hn.algolia.com/)_
 
