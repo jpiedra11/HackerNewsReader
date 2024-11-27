@@ -4,10 +4,9 @@ _Lector de noticias alimentado desde el portal [Hacker News](https://hn.algolia.
 
 ## Capturas de pantalla 📷
 
-<img src="(https://github.com/user-attachments/assets/2562e5b2-601c-469b-b310-758349da37f0)" width="250"/>
-![imagen](https://github.com/user-attachments/assets/b9efa98e-ecb0-4dc1-8a55-0224c89eac2e)
-![imagen](https://github.com/user-attachments/assets/b3dc7bea-09b8-447f-a191-2cb18769d190)
-
+![imagen](https://github.com/user-attachments/assets/882dc7bc-c142-4628-a17d-6defb18e6d1a)
+![imagen](https://github.com/user-attachments/assets/40c824cd-6174-4bf2-967c-e3595ce4055b)
+![imagen](https://github.com/user-attachments/assets/0623d802-ffe4-41b9-8d37-dbd88582a1e2)
 
 ## Tecnología 🛠️
 
