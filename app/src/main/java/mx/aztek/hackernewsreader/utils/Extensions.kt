@@ -20,7 +20,7 @@ fun String.timeAgo(): String {
         dateFormat.timeZone = TimeZone.getDefault()
         return getTimeAgo(convertedDate!!)
     } catch (e: ParseException) {
-        return "Invalid string"
+        return "Invalid date"
     }
 }
 
@@ -43,7 +43,8 @@ fun getTimeAgo(date: Date): String {
         diff < 2 * HOUR_MILLIS -> "an hour ago"
         diff < 24 * HOUR_MILLIS -> "${ diff / HOUR_MILLIS } hours ago"
         diff < 48 * HOUR_MILLIS -> "yesterday"
-        else -> "${ diff / DAY_MILLIS } days ago"
+        diff < 7 * DAY_MILLIS -> "${ diff / DAY_MILLIS } days ago"
+        else -> "long time ago"
     }
 }
 

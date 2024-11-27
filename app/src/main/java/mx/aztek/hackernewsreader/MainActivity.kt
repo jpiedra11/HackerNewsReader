@@ -57,6 +57,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
@@ -65,6 +66,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import mx.aztek.hackernewsreader.ui.theme.HackerNewsReaderTheme
+import mx.aztek.hackernewsreader.utils.Constants.GOOGLE_URL
 import mx.aztek.hackernewsreader.utils.timeAgo
 import mx.aztek.hackernewsreader.viewmodel.HackerNewsViewModel
 
@@ -176,7 +178,7 @@ fun ListDetailLayout(
                 }
             },
             detailPane = {
-                val url = navigator.currentDestination?.content?.toString() ?: "www.google.com"
+                val url = navigator.currentDestination?.content?.toString() ?: GOOGLE_URL
                 AnimatedPane {
                     Column(
                         modifier =
@@ -192,12 +194,12 @@ fun ListDetailLayout(
                                     .weight(1f),
                         ) {
                             TopAppBar(
-                                title = { Text(text = "Back") },
+                                title = { Text(text = stringResource(R.string.back)) },
                                 navigationIcon = {
                                     IconButton(onClick = { navigator.navigateBack() }) {
                                         Icon(
                                             imageVector = Icons.Filled.ArrowBack,
-                                            contentDescription = "Back",
+                                            contentDescription = stringResource(R.string.back),
                                         )
                                     }
                                 },
@@ -292,7 +294,7 @@ fun DeleteBackground(swipeDismissState: SwipeToDismissBoxState) {
         contentAlignment = Alignment.CenterEnd,
     ) {
         Text(
-            text = "Delete",
+            text = stringResource(R.string.delete),
             color = Color.White,
             fontWeight = FontWeight.Bold,
         )

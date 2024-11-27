@@ -28,7 +28,8 @@ class HackerNewsViewModel
 
         fun refreshNews() {
             viewModelScope.launch {
-                _hits.value = repository.getHits().filter { hit -> !getDeletedNews().contains(hit.objectID) }
+                _hits.value =
+                    repository.getHits().filter { hit -> !getDeletedNews().contains(hit.objectID) }
             }
         }
 
